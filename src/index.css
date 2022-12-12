@@ -24,7 +24,7 @@ code {
   border: 0;
   border-bottom: 3px solid rgb(201, 28, 28);
   padding-bottom: 0.4375rem;
-  background-color: rgb(24, 26, 24);
+  background-color: rgb(255, 255, 255);
   
 }
 :focus {
@@ -37,7 +37,7 @@ code {
 
 /* texto de la fecha de creaciòn de marvel */
 .mvl-card--explore.card-body.is-sliding:before {
-  background: #0ac222;
+  background: #e91809;
   bottom: 100%;
   content: "";
   height: 100%;
