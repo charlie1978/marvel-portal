@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: var( --space-lg);
-    background-color: white;
+    text-color: rgb(0, 0, 0);
 }
 
 .mvl-characters-page-header{
@@ -31,10 +31,10 @@
 
 .main
 {
-  background-color: black;
+  background-color: white;
 }
 
 .container
 {
-    color: white;
+    color: black;
 }

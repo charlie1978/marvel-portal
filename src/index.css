@@ -25,16 +25,24 @@ code {
   border-bottom: 3px solid rgb(201, 28, 28);
   padding-bottom: 0.4375rem;
   background-color: rgb(255, 255, 255);
-  
+   
 }
 :focus {
   outline-color: yellow;
-  
 } 
+
 /* .mvl-characters-page{
   background-color: black;
 } */
-
+.input-icon {
+  color: #191919;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 /* texto de la fecha de creaciòn de marvel */
 .mvl-card--explore.card-body.is-sliding:before {
   background: #e91809;
