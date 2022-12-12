@@ -1,14 +1,15 @@
-export default function Filter() {
+function Filter() {
   return (
-    <div id="srch" className="mvl-character-gri-filters">
+    <div className="mvl-character-gri-filters">
       <input
-        type="text"
+        type="search"
+        placeholder="SEARCH"
+        className="input-nav"
         value=""
         autoComplete="off"
         aria-autocomplete="list"
-        aria-controls="react-autowhatever-1"
-        className="typeahead__input"
-        placeholder="Search"></input>
+        aria-controls="reac-autowhatever-1"></input>
     </div>
   );
 }
+export default Filter;
