@@ -25,7 +25,6 @@ code {
   border-bottom: 3px solid rgb(201, 28, 28);
   padding-bottom: 0.4375rem;
   background-color: rgb(255, 255, 255);
-   
 }
 :focus {
   outline-color: yellow;
