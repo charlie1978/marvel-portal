@@ -29,12 +29,29 @@
     width: 96%;
 }
 
-.main
-{
-  background-color: white;
-}
-
-.container
-{
-    color: black;
-}
+/* cambios en la barra de busqueda SEARCH */
+.input-nav {
+    width: 40%;
+    border-radius: 0;
+    font-size: 2rem;
+    border: 0;
+    border-bottom: 3px solid rgb(201, 28, 28);
+    padding-bottom: 0.4375rem;
+    background-color: rgb(255, 255, 255);
+  }
+  :focus {
+    outline-color: yellow;
+  } 
+  
+  /* .mvl-characters-page{
+    background-color: black;
+  } */
+  .input-icon {
+    color: #191919;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }

@@ -2,7 +2,6 @@ function Filter() {
   return (
     <div className="mvl-character-gri-filters">
       <input
-        id="input-nav"
         type="search"
         placeholder="SEARCH"
         className="input-nav"
