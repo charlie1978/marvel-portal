@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 CharacterCard.propTypes = {
   image: PropTypes.string,
   name: PropTypes.string,
+  description: PropTypes.string,
   isSkeleton: PropTypes.bool
 };
 
-export default function CharacterCard({ image, name, isSkeleton }) {
+export default function CharacterCard({ image, name, description, isSkeleton }) {
   return (
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
       <div className="mvl-character-card__image-container">
@@ -18,6 +19,7 @@ export default function CharacterCard({ image, name, isSkeleton }) {
           <h4 className="u-no-margin">{name}</h4>
           <h6 className="marvel-label">1939 Timely Comics</h6>
           <h6 className="marvel-label">{new Date().toDateString()}</h6>
+          <h4 className="u-no-margin">{description}</h4>
         </div>
       </div>
     </div>
