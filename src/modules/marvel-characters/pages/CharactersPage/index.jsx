@@ -18,7 +18,7 @@ export function CharactersPage() {
         <div className="container">
           <h1 className="featured-text">FEATURED CHARACTERS</h1>
           <FeaturedCharacters />
-          <h1>MARVEL CHARACTERS LIST</h1>
+          <h1 className="title-character">MARVEL CHARACTERS LIST</h1>
           <CharactersGrid />
         </div>
       </div>

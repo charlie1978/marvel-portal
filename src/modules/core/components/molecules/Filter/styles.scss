@@ -22,3 +22,9 @@
 :focus {
   outline-color: var(--color-warning);
 }
+.Container-span{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
