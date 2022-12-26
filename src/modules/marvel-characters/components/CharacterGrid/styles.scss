@@ -1,0 +1,16 @@
+.container {
+  color: var(--black);
+  margin: 0px auto;
+  max-width: 1000px;
+}
+
+.mvl-grid {
+  display: inline-grid;
+  gap: 10px;
+  width: 50%;
+  margin-left: 400px;
+}
+
+.mvl-grid-6 {
+  grid-template-columns: repeat(6, minmax(20%, 1fr));
+}

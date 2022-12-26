@@ -5,25 +5,18 @@
   padding-left: 1.875rem;
   border-radius: 0;
   background-color: var(--white);
-  width: 40%;
-  border-radius: 0;
   font-size: 2rem;
   border: 0;
   border-bottom: 3px solid rgb(201, 28, 28);
-  padding-bottom: 0.4375rem;
   background-color: rgb(24, 26, 24);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 5px;
-  gap: var(--space-lg);
-  padding: var(--space-md) 0;
   box-sizing: border-box;
+  margin-left: 300px;
 }
 .span-results {
   font-size: 1.2rem;
   color: grey;
+  margin-left: 400px;
+
 }
 
 :focus {
@@ -32,6 +25,4 @@
 .Container-span {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
 }
