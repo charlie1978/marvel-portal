@@ -88,6 +88,6 @@ For connections with Marvel API.
 ### Add Public Key to access your data
 
 1. On the --My Developer-- Account copy the value on `Your public key` 
-2. Copy the file called `.env` and with a new name `.env.local`
+2. Rename the file called `.env` and with a new name `.env.local`
 3. On the `.env.local` add your assign your public key to `REACT_APP_PUBLIC_KEY`
 4. run your project, you should see the images of the characters 
