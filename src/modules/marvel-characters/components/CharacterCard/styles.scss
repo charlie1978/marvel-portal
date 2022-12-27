@@ -16,31 +16,6 @@
   height: 100%;
 }
 
-<<<<<<< HEAD
-.mvl-character-card__image-container{
-    background: black;
-    height: 50%;
-    position: relative;
-    &::before{
-        content: '';
-        width: 100%;
-        height: 5px;
-        background: var(--color-logo);
-        position: absolute;
-        bottom: -5px;
-        z-index: 2;
-        
-    }
-}
-
-.mvl-character-card__image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: left bottom;
-    transform: scaleX(1) 2s;
-    border-bottom: 2px solid var(--color-logo);
-=======
 .mvl-character-card__image-container {
   background: black;
   height: 50%;
@@ -63,18 +38,18 @@
   object-position: left bottom;
   transform: scaleX(1) 2s;
   border-bottom: 2px solid var(--color-logo);
->>>>>>> Luis_Dev
 }
 .mvl-character-card__body {
   padding: var(--space-sm);
   height: 2px;
-  transition: height 0.8s;
+  transition: height 0.8s; 
 }
 
 .mvl-character-card:hover .mvl-character-card__body {
   height: 355px;
   background: var(--color-logo);
 }
+
 
 .mvl-character-card[data-is-skeleton=true]{
     position: relative;
@@ -90,10 +65,6 @@
         opacity: 0.9;
         z-index: 3;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> Luis_Dev
 }
 
 .mvl-character-card:hover {
