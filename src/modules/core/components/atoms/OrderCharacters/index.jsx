@@ -2,10 +2,10 @@ import './styles.scss';
 export default function OrderCharacter() {
   return (
     <div>
-      {/* <div>
+      { <div>
         <h3>Ordenar por</h3>
-      </div> */}
-      {/* <div>
+      </div> }
+      { <div>
         <h3>Ordenar por</h3>
       </div>
       <div>
@@ -17,7 +17,7 @@ export default function OrderCharacter() {
             Z-A
           </option>
         </select>
-      </div> */}
+      </div> }
     </div>
   );
 }
