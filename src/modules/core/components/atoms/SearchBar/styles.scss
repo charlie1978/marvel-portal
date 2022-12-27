@@ -1,5 +1,6 @@
 .filter_search {
   border: 1px solid transparent;
+
  }
 
 .icon_search {
@@ -18,4 +19,7 @@
   border-bottom: 3px solid rgb(201, 28, 28);
   padding-bottom: 0.4375rem;
   background-color: rgb(255, 255, 255);
+  margin-left: 10px;
+  outline: none;
+  position: static;
 }

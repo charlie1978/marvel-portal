@@ -11,9 +11,9 @@
     cursor: pointer;
 }
 
-.mvl-character-card:hover .mvl-character-card__image{
-    transform: scale(1.1);
-    height: 97%;
+.mvl-character-card:hover .mvl-character-card__image {
+  transform: scale(1.1);
+  height: 100%;
 }
 
 .mvl-character-card__image-container{
@@ -39,18 +39,16 @@
     object-position: left bottom;
     transform: scaleX(1) 2s;
     border-bottom: 2px solid var(--color-logo);
-    
+}
+.mvl-character-card__body {
+  padding: var(--space-sm);
+  height: 2px;
+  transition: height 0.8s;
 }
 
-.mvl-character-card__body{
-    padding: var(--space-sm);
-    height: 2px;
-    transition: height 2s;
-}
-
-.mvl-character-card:hover .mvl-character-card__body{
-    height: 355px;
-    background: var(--color-logo);
+.mvl-character-card:hover .mvl-character-card__body {
+  height: 355px;
+  background: var(--color-logo);
 }
 
 .mvl-character-card[data-is-skeleton=true]{
@@ -69,16 +67,16 @@
     }
 }
 
-.mvl-character-card:hover{
-     color: var(--color-accent);
-     box-shadow: 5px 10px 20px 1px rgb(153, 66, 175);
-     transition: all 0.7s linear;
-  
-     .mvl-character-card__image{
-         width: 100%;
-         height: 97%;
-         object-fit: cover;
-         object-position: left bottom;
-         transition: all 0.1s linear;
-     }
+.mvl-character-card:hover {
+  color: var(--color-accent);
+  box-shadow: 5px 10px 20px 1px rgb(153, 66, 175);
+  transition: all 0.7s linear;
+
+  .mvl-character-card__image {
+    width: 100%;
+    height: 99%;
+    object-fit: cover;
+    object-position: left bottom;
+    transition: all 0.3s linear;
+  }
 }
