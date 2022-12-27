@@ -84,20 +84,6 @@
     outline-color: #e8b63e
 }
 
-.filters {
-    font-size: 1rem;
-    width: 100%;
-    display: block;
-    justify-content: flex-end;
-}
-
-.filters__movie {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    cursor: pointer;
-}
-
 .filters__movie--text {
     font-weight: 500;
 }
