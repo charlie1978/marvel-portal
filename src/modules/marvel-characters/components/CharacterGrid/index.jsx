@@ -10,43 +10,24 @@ import Filter from '@/modules/core/components/molecules/Filter';
 
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
-CharacterGridPaginated.propTypes = {
-  n: PropTypes.number
-};
 
-export default function CharacterGridPaginated({ n }) {
+export default function CharacterGridPaginated() {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
   const [queryParams, setQueryParams] = useState({});
-
-  const orden = {
-    orderBy: 'name'
-  };
-  const orden1 = {
-    orderBy: '-name'
-  };
 
   useEffect(() => {
     fetchCharactersAtPage();
   }, []);
 
   async function fetchCharactersAtPage(page = 1) {
-    if (n == 1) {
-      setLoading(true);
-      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, orden);
-      setTotalItems(data.total);
-      setCharacters(data.results);
-      setLoading(false);
-    }
+    setLoading(true);
+    const data = await getCharactersForGrid(page, ITEMS_PER_PAGE);
+    setTotalItems(data.total);
+    setCharacters(data.results);
+    setLoading(false);
     //console.log('Total Personajes: ', data.total);
-    if (n == 2) {
-      setLoading(true);
-      const data = await getCharactersForGrid(page, ITEMS_PER_PAGE, orden1);
-      setTotalItems(data.total);
-      setCharacters(data.results);
-      setLoading(false);
-    }
   }
 
   const onPageChange = (newPage) => {
