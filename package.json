@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "lint": "eslint .",
+   "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "build": "react-app-rewired build",

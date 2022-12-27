@@ -4,7 +4,6 @@
     margin-bottom: 51px;
 }
 
-
 .search-bar {
     padding: 70px 0px 0;
     display: flex;
@@ -18,7 +17,6 @@
     width: 100%;
     border-bottom: 1px solid #151515;
 }
-
 
 .typeahead__icon {
     position: absolute;
@@ -91,32 +89,32 @@
     justify-content: flex-end;
 }
 
-.filters__movie {
+.filters__tv {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     cursor: pointer;
 }
 
-.filters__movie--text {
+.filters__tv--text {
     font-weight: 500;
 }
 
-.filters__movie.icon {
+.filters__tv.icon {
     width: 1.4rem;
     height: 1.4rem;
 }
 
-.movies {
+.tv {
     background-color: white;
-    width: 480px;
-    right: 0;
+    width: 280px;
+    right: 50;
     position: absolute;
     border: 1px solid #dfdfdf;
     z-index: 50;
 }
 
-.movies__list {
+.tv__list {
     list-style-type: none;
     max-height: 280px;
     font-weight: 500;
@@ -126,20 +124,20 @@
     box-sizing: border-box;
 }
 
-.movies__list--item {
+.tv__list--item {
     margin-bottom: inherit;
 }
 
-.movies__list--item input {
+.tv__list--item input {
     cursor: pointer;
 }
 
-.movies__list--text {
+.tv__list--text {
     padding-left: 15px;
     color: var(--color-primary-dark);
 }
 
-.movies__buttons--container {
+.tv__buttons--container {
     display: flex;  
     justify-content: space-between;
     border-top: 1px  solid #dfdfdf;
@@ -147,7 +145,7 @@
     padding-top: 15px;
 }
 
-.movies__buttons {
+.tv__buttons {
     color: #858585;
     display: flex;
     background-color: transparent;
@@ -159,7 +157,6 @@
     border: none;
 }
 
-.movies__buttons--right {
+.tv__buttons--right {
     display: flex;
 }
-
