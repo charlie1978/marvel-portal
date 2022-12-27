@@ -26,6 +26,7 @@ export default function CharacterProm() {
         <button onClick={() => mostrarAlert()} className="button-footer">
           ÙNETE AHORA
         </button>
+        <a href=""></a>
         <br />
         <a href="" onClick={() => mostrarAlert2()}>
           Los terminos y condiciones aplican

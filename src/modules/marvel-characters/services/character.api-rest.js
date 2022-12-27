@@ -7,17 +7,18 @@ const domain = `characters`;
 export async function getCharatersAtPage(
   page,
   itemsPerPage,
+  orden,
   { mappedBy = defaultMapper, queryParams = {} }
 ) {
-  return getAllPaginated(domain, page, {
+  return getAllPaginated(domain, page, orden, {
     mappedBy,
     itemsPerPage,
     ...queryParams
   });
 }
 
-export function getCharactersForGrid(page, itemsPerPage) {
-  return getCharatersAtPage(page, itemsPerPage, {
+export function getCharactersForGrid(page, itemsPerPage, orden) {
+  return getCharatersAtPage(page, itemsPerPage, orden, {
     mappedBy: mapCharacterToCard
   });
 }
