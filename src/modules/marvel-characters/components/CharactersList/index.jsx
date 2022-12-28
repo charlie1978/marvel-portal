@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getCharactersForList } from '@/modules/marvel-characters/services';
 import CharacterItem from '../../../core/components/atoms/CharacterItem';
-// import Paginator from '@/modules/core/components/molecules/Paginator';
+import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
-
 
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
@@ -13,7 +12,7 @@ export default function CharacterListPaginated() {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const [queryParams, setQueryParams] = useState({});
+  // const [queryParams, setQueryParams] = useState({});
 
   useEffect(() => {
     fetchCharactersAtPage();
@@ -25,19 +24,14 @@ export default function CharacterListPaginated() {
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
-    //console.log('Total Personajes: ', data.total);
+    console.log('Total Personajes: ', data.total);
   }
 
-//   const onPageChange = (newPage) => {
-//     fetchCharactersAtPage(newPage);
-//   };
-
-  const onQueryChange = (query) => {
-    setQueryParams(query);
+  const onPageChange = (newPage) => {
+    fetchCharactersAtPage(newPage);
   };
-
   return (
-    <>      
+    <>
       <div className="mvl-grid mvl-grid-6">
         <CharacterList
           characters={characters}
@@ -45,12 +39,12 @@ export default function CharacterListPaginated() {
           itemsPerPage={ITEMS_PER_PAGE}
         />
       </div>
-      {/* <Paginator
+      <Paginator
         initialPage={INITIAL_PAGE}
         itemsPerPage={ITEMS_PER_PAGE}
         totalItems={totalItems}
         onPageChange={onPageChange}
-      /> */}
+      />
     </>
   );
 }
