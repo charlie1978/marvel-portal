@@ -27,7 +27,8 @@ export default function CharacterGridPaginated() {
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
-    //console.log('Total Personajes: ', data.total);
+    console.log('Total Personajes: ', data.total);
+    console.log('Cantidad Personajes:', data.results);
   }
 
   const onPageChange = (newPage) => {

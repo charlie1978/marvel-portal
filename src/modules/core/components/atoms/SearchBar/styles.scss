@@ -10,6 +10,16 @@
   border: 1px solid var(--color-warning);
 }
 
+.mvl-character-gri-filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 2px;
+  padding: var(--space-md) 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .input-nav {
   width: 40%;
   border-radius: 0;
@@ -20,5 +30,5 @@
   background-color: rgb(255, 255, 255);
   margin-left: 10px;
   outline: none;
-  position: static;
+  position: relative;
 }
