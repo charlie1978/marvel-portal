@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: var( --space-lg);
-    background-color: var(--white);;
+    background-color: var(--var(--white));
     margin-bottom: 30px ;
 }
 
@@ -29,6 +29,7 @@
     width: 96%;
 }
 
+
 .main
 {
   background-color: var(--white);
@@ -38,6 +39,7 @@
 {
     color: var(--black);
 }
+
 .input-nav {
     width: 40%;
     border-radius: 0;

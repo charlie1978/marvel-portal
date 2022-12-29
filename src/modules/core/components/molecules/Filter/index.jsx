@@ -1,4 +1,7 @@
+import SearchBar from '../../atoms/SearchBar';
+import TotalResults from '../../atoms/TotalResults';
 import PropTypes from 'prop-types';
+import SerieFilter from '../MovieFilter';
 import { RiSearch2Line } from 'react-icons/ri';
 import ButtonMovies from '../../atoms/ButtonArrow';
 
@@ -9,6 +12,11 @@ Filter.propTypes = {
 function Filter({ totalItems }) {
   return (
     <div className="mvl-character-gri-filters">
+      <div className="filter_search">
+        <SearchBar />
+      </div>
+      <SerieFilter />
+      <TotalResults totalItems={totalItems} />
       <div>
         <RiSearch2Line />
         <input

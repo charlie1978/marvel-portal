@@ -1,4 +1,4 @@
-.page__component.firstComponent, .page__component:first-child {
+.page__component:first-child {
     margin-top: 0;
     padding: 0;
     margin-bottom: 51px;
@@ -91,12 +91,6 @@
     justify-content: flex-end;
 }
 
-.filters__movie {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    cursor: pointer;
-}
 
 .filters__movie--text {
     font-weight: 500;

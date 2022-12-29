@@ -16,7 +16,11 @@ const AppRoutes = () => (
     <Route exact path="/events" element={<EventsPage />} />
     <Route exact path="/series" element={<SeriesPage />} />
     <Route exact path="/stories" element={<StoriesPage />} />
+
+    <Route exact path="*" element={<NotFoundPage404 />} />
+=======
     <Route element={<NotFoundPage404 />} />
+>>>>>>> 18216cd9723be8a391c2489688d23d9c27dd0cbd
   </Routes>
 );
 
