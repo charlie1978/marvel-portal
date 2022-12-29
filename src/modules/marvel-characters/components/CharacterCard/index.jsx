@@ -25,6 +25,7 @@ export default function CharacterCard({ image, name, description, isSkeleton }) 
           <h3 className="u-no-margin"> </h3>
           <h3 className="u-no-margin">{description}</h3>
           <h6 className="marvel-label">{currentDate}</h6>
+          <h4 className="u-no-margin">{name}</h4>
         </div>
       </div>
     </div>

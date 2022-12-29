@@ -1,4 +1,10 @@
-.page__component.firstComponent, .page__component:first-child {
+.page__component:first-child {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 51px;
+}
+
+.page__component.firstComponent {
     margin-top: 0;
     padding: 0;
     margin-bottom: 51px;
@@ -72,14 +78,11 @@
     
 }
 
-.typeahead__input {
-    font: 800 26px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.typeahead__input:focus {
-    outline-color: #e8b63e
+.filters {
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+    justify-content: flex-end;
 }
 
 .filters__tv {

@@ -65,6 +65,7 @@ export default function MainFooter() {
                     src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvel_insider-topnav-logo-large2x.png"
                     alt="Logotipo de Marvel Insider"
                     className="main-footer__promotion-image"
+                    width="60px"
                   />
                 </figure>
               </div>

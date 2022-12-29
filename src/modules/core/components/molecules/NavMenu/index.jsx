@@ -11,7 +11,7 @@ export function NavMenu() {
           <img src={img(`./marvel_logo.png`)} className="mvl-navbar__img" alt="company logo" />
         </NavLink>
         <div className="mvl-navbar__actions">
-          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/">
+          <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/characters">
             CHARACTERS
           </NavLink>
           <NavLink className="mvl-navbar-item mvl-navbar-item--text" to="/comics" target="_blank">
@@ -31,7 +31,6 @@ export function NavMenu() {
           </NavLink>
         </div>
       </div>
-
       <div className="mvl-navbar--right"></div>
     </nav>
   );

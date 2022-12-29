@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
 import { getCharactersForGrid } from '@/modules/marvel-characters/services';
-
 import CharacterCard from '@/modules/marvel-characters/components/CharacterCard';
 import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
@@ -27,8 +25,10 @@ export default function CharacterGridPaginated() {
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
+
     console.log('Total Personajes: ', data.total);
     console.log('Cantidad Personajes:', data.results);
+    //console.log('Total Personajes: ', data.total);
   }
 
   const onPageChange = (newPage) => {

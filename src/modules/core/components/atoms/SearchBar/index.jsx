@@ -9,7 +9,6 @@ function SearchBar() {
     console.log(event.target.value);
     setSearchValue(event.target.value);
   };
-
   return (
     <div className="filter_search">
       <RiSearch2Line className="icon_search" />
