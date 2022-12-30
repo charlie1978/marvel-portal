@@ -1,5 +1,4 @@
 .mvl-featuredCharacters-card-section {
-
   width: 100%;
   display: inline-grid;
   gap: 10px;
@@ -38,6 +37,11 @@
   transform: scaleX(1);
   cursor: pointer;
   transition: 0.8s;
+}
+.mvl-featuredCharacters-card__body {
+  padding: var(--space-sm);
+  height: 0px;
+
 }
 
 .mvl-featuredCharacters-card:hover {
