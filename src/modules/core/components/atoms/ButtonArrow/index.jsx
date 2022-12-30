@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { RiArrowDropDownFill } from 'react-icons/ri';
 import ShowMoviesList from '../ShowMoviesList';
+import ShowtvList from '../ShowtvList';
 
 function ButtonArrow() {
   const [toggle, setToggle] = useState(false);
@@ -17,6 +18,12 @@ function ButtonArrow() {
         <RiArrowDropDownFill className="filters__movie icon" />
       </div>
       {toggle && <ShowMoviesList show={toggle} />}
+
+      <div className="filters__tv" onClick={handleToggle}>
+        <div className="filters__tv--text">TV</div>
+        <RiArrowDropDownFill className="filters__tv icon" />
+      </div>
+      {toggle && <ShowtvList show={toggle} />}
     </div>
   );
 }
