@@ -1,5 +1,4 @@
 .mvl-featuredCharacters-card-section {
-
   width: 100%;
   display: inline-grid;
   gap: 10px;
@@ -15,8 +14,7 @@
 }
 
 .mvl-featuredCharacters-card__image-container {
-  // background: var(--color-accent);
-  background: rgb(47, 130, 55);
+  background: var(--color-accent);
   height: 50%;
   position: relative;
   &::before {
@@ -40,6 +38,11 @@
   cursor: pointer;
   transition: 0.8s;
 }
+.mvl-featuredCharacters-card__body {
+  padding: var(--space-sm);
+  height: 0px;
+
+}
 
 .mvl-featuredCharacters-card:hover {
   .mvl-featuredCharacters-card__image {
@@ -47,14 +50,13 @@
   }
   .mvl-featuredCharacters-card__body {
     padding: var(--space-sm);
-    // background-color: var(--color-logo);
-    background-color: rgb(214, 15, 15);
+    background-color: var(--color-logo);
     opacity: 1;
     height: 200px;
     transition: 0.3s ease-in-out;
-  }
     width: 100%;
     display: inline-grid;
     gap: 10px;
     grid-template-columns: repeat(6, minmax(15%, 1fr));
+  }
 }
