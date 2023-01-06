@@ -1,39 +1,7 @@
 import React, { useState } from 'react';
 import './styles.scss';
 
-const tvList = [
-  'ARMOR WARS',
-  'ECHO',
-  'HAWKEYE',
-  'I AM GROOT',
-  'LEGION',
-  'LOKI',
-  'MARVEL RISING',
-  'MARVEL`S AGENT CARTER',
-  'MARVEL`S AGENTS OF S.H.I.E.L.D.',
-  'MARVEL`S AVENGERS',
-  'MARVEL`S CLOAK AND DAGGER',
-  'MARVEL`S DAREDEVIL',
-  'MARVEL`S GUARDIANS OF THE GALAXY',
-  'MARVEL`S HIT-MONKEY',
-  'MARVEL`S INHUMANS',
-  'MARVEL`S IRON FIST',
-  'MARVEL`S JESSICA JONES',
-  'MARVEL`S LUKE CAGE',
-  'MARVEL`S M.O.D.O.K.',
-  'MARVEL`S MOON GIRL AND DEVIL DINOSAUR',
-  'MARVEL`S RUNAWAYS',
-  'MARVEL`S SPIDER-MAN',
-  'MARVEL`S THE DEFENDERS',
-  'MARVEL`S THE PUNISHER',
-  'SECRET INVASION',
-  'SHE-HULK',
-  'THE FALCON AND THE WINTER SOLDIER',
-  'THE GIFTED',
-  'WANDAVISION',
-  'WEREWOLF BY NIGHT',
-  'WHAT IF...?'
-];
+const tvList = [];
 
 function ShowtvList() {
   const [checked, setChecked] = useState([]);

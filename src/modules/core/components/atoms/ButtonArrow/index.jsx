@@ -16,14 +16,16 @@ function ButtonArrow() {
       <div className="filters__movie" onClick={handleToggle}>
         <div className="filters__movie--text">MOVIE</div>
         <RiArrowDropDownFill className="filters__movie icon" />
-      </div>
-      {toggle && <ShowMoviesList show={toggle} />}
+        {toggle && <ShowMoviesList show={toggle} />}
 
-      <div className="filters__tv" onClick={handleToggle}>
-        <div className="filters__tv--text">TV</div>
-        <RiArrowDropDownFill className="filters__tv icon" />
+        {/* aca debe ir una rutina de click condicional menu tv y movie  */}
+
+        <div className="filters__tv" onClick={handleToggle}>
+          <div className="filters__tv--text">TV</div>
+          <RiArrowDropDownFill className="filters__tv icon" />
+          {toggle && <ShowtvList show={toggle} />}
+        </div>
       </div>
-      {toggle && <ShowtvList show={toggle} />}
     </div>
   );
 }

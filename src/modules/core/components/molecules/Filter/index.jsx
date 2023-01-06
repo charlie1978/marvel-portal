@@ -1,7 +1,7 @@
-import SearchBar from '../../atoms/SearchBar';
-import TotalResults from '../../atoms/TotalResults';
 import PropTypes from 'prop-types';
-import SerieFilter from '../MovieFilter';
+import { BiSearchAlt } from 'react-icons/bi';
+/*import { RiSearch2Line } from 'react-icons/ri';*/
+import ButtonMovies from '../../atoms/ButtonArrow';
 
 Filter.propTypes = {
   totalItems: PropTypes.number.isRequired
@@ -10,11 +10,23 @@ Filter.propTypes = {
 function Filter({ totalItems }) {
   return (
     <div className="mvl-character-gri-filters">
-      <div className="filter_search">
-        <SearchBar />
+      <div>
+        <BiSearchAlt />
+        <input
+          type="text"
+          value=""
+          autoComplete="off"
+          aria-autocomplete="list"
+          aria-controls="react-autowhatever-1"
+          placeholder="Search"
+          className="input-nav"
+          readOnly
+        />
+        <ButtonMovies />
       </div>
-      <SerieFilter />
-      <TotalResults totalItems={totalItems} />
+      <div className="Container-span">
+        <span className="span-results">{totalItems} RESULTADOS</span>
+      </div>
     </div>
   );
 }
