@@ -12,7 +12,7 @@ CharacterCard.propTypes = {
 };
 
 export default function CharacterCard({ image, name, alias, currentDate, isSkeleton }) {
-  return (
+  return (    
     <div className="mvl-character-card" data-is-skeleton={isSkeleton}>
       <div className="mvl-character-card__image-container">
         <img className="mvl-character-card__image" src={image} alt="" />
