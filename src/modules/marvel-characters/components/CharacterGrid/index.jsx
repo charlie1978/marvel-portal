@@ -13,18 +13,12 @@ const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
 
 const currentDate = new Date().toDateString();
-// const alias = (name) => {
-//   const aliasName= [...name];
-//   alias.name.split('(');
-//   };
 
 CharacterGridPaginated.propTypes = {
-  // searchValue: PropTypes.string,
   option: PropTypes.number
 };
 
 export default function CharacterGridPaginated({ 
-  // searchValue, 
   option
 }) {
   const [totalItems, setTotalItems] = useState(0);
@@ -32,20 +26,11 @@ export default function CharacterGridPaginated({
   const [isLoading, setLoading] = useState(false);
   // const [queryParams, setQueryParams] = useState({});
 
-  // const nameStartsWith = {
-  //    search: searchValue
-  // };
-
-
-
   const order = {
      orderBy: '-name'
   };
 
- 
-
-  
-  useEffect(() => {
+   useEffect(() => {
     fetchCharactersAtPage();
   }, []);
 
@@ -126,11 +111,11 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
 
   return characters.map(({ name, image }, index) => (
     <CharacterCard
-      name={name}
+      name={name.split(' (',1)}
       image={image}
       key={index}
       currentDate={currentDate}
-      // alias={alias}
+      alias={name}
       isSkeleton={isLoading}
     />
   ));
