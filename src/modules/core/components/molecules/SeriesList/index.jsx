@@ -12,7 +12,6 @@ export default function SeriesListPaginated() {
   const [totalItems, setTotalItems] = useState(0);
   const [series, setSeries] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const [queryParams, setQueryParams] = useState({});
 
   useEffect(() => {
     fetchSeriesAtPage();
@@ -27,25 +26,11 @@ export default function SeriesListPaginated() {
     console.log('Total Series: ', data.total);
   }
 
-  // const onPageChange = (newPage) => {
-  //   fetchSeriesAtPage(newPage);
-  // };
-
-  const onQueryChange = (query) => {
-    setQueryParams(query);
-  };
-
   return (
     <>
       <div className="series_list">
         <SerieList series={series} isLoading={isLoading} itemsPerPage={ITEMS_PER_PAGE} />
       </div>
-      {/* <Paginator
-        initialPage={INITIAL_PAGE}
-        itemsPerPage={ITEMS_PER_PAGE}
-        totalItems={totalItems}
-        onPageChange={onPageChange}
-      /> */}
     </>
   );
 }
