@@ -3,7 +3,7 @@ import { getInverseAllPaginated } from '@/modules/core/services/marvel.api-rest'
 import { defaultMapper } from '@/modules/core/services';
 import { mapCharacterToCard } from '@/modules/marvel-characters/services';
 import { mapCharacterToList } from './character.mapper';
-import { getLettersFiltered } from 'src/modules/core/services/marvel.api-rest';
+import { getLettersFilteredPaginated } from 'src/modules/core/services/marvel.api-rest';
 
 const domain = `characters`;
 
@@ -32,6 +32,19 @@ export async function getInverseCharatersAtPage(
   });
 }
 
+export async function getLettersFilteredCharatersAtPage(
+  page,
+  itemsPerPage,
+  letters,
+  { mappedBy = defaultMapper, queryParams = {} }
+) {
+  return getLettersFilteredPaginated(domain, page, letters, {
+    mappedBy,
+    itemsPerPage,
+    ...queryParams
+  });
+}
+
 export function getCharactersForGrid(page, itemsPerPage) {
   return getCharatersAtPage(page, itemsPerPage, {
     mappedBy: mapCharacterToCard
@@ -50,8 +63,8 @@ export function getCharactersForList(page, itemsPerPage) {
   });
 }
 
-export function getFilteredCharactersForList(page, itemsPerPage) {
-  return getLettersFiltered(page, itemsPerPage, {
+export function getFilteredCharactersForList(page, itemsPerPage, letters) {
+  return getLettersFilteredCharatersAtPage(page, itemsPerPage, letters, {
     mappedBy: mapCharacterToList
   });
 }

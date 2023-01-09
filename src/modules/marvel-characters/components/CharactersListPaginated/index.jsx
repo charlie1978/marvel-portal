@@ -13,7 +13,7 @@ export default function CharacterListPaginated() {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const [queryParams, setQueryParams] = useState({});
+ //const [queryParams, setQueryParams] = useState({});
 
   useEffect(() => {
     fetchCharactersAtPage();

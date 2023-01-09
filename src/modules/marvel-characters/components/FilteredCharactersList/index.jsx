@@ -2,9 +2,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { getCharactersForList } from '@/modules/marvel-characters/services';
+import { getFilteredCharactersForList } from '@/modules/marvel-characters/services';
 import CharacterItem from '../../../core/components/atoms/CharacterItem';
-// import Paginator from '@/modules/core/components/molecules/Paginator';
+
 import './styles.scss';
 
 const INITIAL_PAGE = 1;
@@ -15,7 +15,7 @@ export default function FilteredCharacterListPaginated({ searchValue }) {
   const [totalItems, setTotalItems] = useState(0);
   const [characters, setCharacters] = useState([]);
   const [isLoading, setLoading] = useState(false);
-  const [queryParams, setQueryParams] = useState({});
+//  const [queryParams, setQueryParams] = useState({});
 
   useEffect(() => {
     fetchCharactersAtPage();
@@ -29,20 +29,17 @@ export default function FilteredCharacterListPaginated({ searchValue }) {
     console.log('el nameStartsWith es: ' + letters.nameStartsWith);
 
     setLoading(true);
-    const data = await getCharactersForList(page, ITEMS_PER_PAGE);
+    const data = await getFilteredCharactersForList(page, ITEMS_PER_PAGE, letters);
     setTotalItems(data.total);
     setCharacters(data.results);
     setLoading(false);
     console.log('Total Personajes: ', data.total);
   }
 
-  //   const onPageChange = (newPage) => {
-  //     fetchCharactersAtPage(newPage);
-  //   };
 
-  const onQueryChange = (query) => {
-    setQueryParams(query);
-  };
+  // const onQueryChange = (query) => {
+  //   setQueryParams(query);
+  // };
 
   return (
     <>
@@ -53,12 +50,6 @@ export default function FilteredCharacterListPaginated({ searchValue }) {
           itemsPerPage={ITEMS_PER_PAGE}
         />
       </div>
-      {/* <Paginator
-        initialPage={INITIAL_PAGE}
-        itemsPerPage={ITEMS_PER_PAGE}
-        totalItems={totalItems}
-        onPageChange={onPageChange}
-      /> */}
     </>
   );
 }
