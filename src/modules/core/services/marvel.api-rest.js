@@ -39,6 +39,22 @@ export async function getInverseAllPaginated(
   });
 }
 
+export async function getLettersFilteredPaginated(
+  domain,
+  page,
+  letters,
+  { mappedBy = defaultMapper, queryParams = {}, itemsPerPage = PAGENATE_BY }
+) {
+  return getLettersFiltered(domain, letters, {
+    mappedBy,
+    queryParams: {
+      ...queryParams,
+      limit: itemsPerPage,
+      offset: getOffset(page, itemsPerPage)
+    }
+  });
+}
+
 export async function getAll(domain, { mappedBy = defaultMapper, queryParams = {} }) {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
@@ -60,10 +76,11 @@ export async function getInverseAll(domain, order, { mappedBy = defaultMapper, q
   });
 }
 
-export async function getLettersFiltered(domain, { mappedBy = defaultMapper, queryParams = {} }) {
+export async function getLettersFiltered(domain, letters, { mappedBy = defaultMapper, queryParams = {} }) {
   return getAndMap(`${BASE_URL}${domain}`, {
     mappedBy,
     queryParams: {
+      ...letters,
       ...queryParams,
       ...credentials
     }
