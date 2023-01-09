@@ -26,70 +26,20 @@ export default function Pagination({ totalItems, pageSize = 10, initialPage = 1,
     setCurrentPage(prevPage);
   }
 
-  function onInitialPageClick() {
-   const initialPage1 = getInitialPage(initialPage);
-    setCurrentPage(initialPage1);
-  }
-
-  function onFinalPageClick() {
-     const finalPage = getFinalPage(currentPage, totalPages);
-     setCurrentPage(finalPage);
-  }
-
   useEffect(() => {
     onPageChange(currentPage);
   }, [currentPage]);
 
   return (
     <div className="mvl-paginator">
+      <span className="mvl-paginator__text">
+        Page <strong>{currentPage} </strong> of <strong>{totalPages}</strong>
+      </span>
       <div className="mvl-paginator__actions">
-        <button
-          className="pagination_button"
-          disabled={isFirstPage(currentPage)}
-          onClick={onPreviousPageClick}>
-          <BiChevronLeft /> Previous
+        <button disabled={isFirstPage(currentPage)} onClick={onPreviousPageClick}>
+          <BiChevronLeft />
         </button>
-
-        <button
-          className="pagination_button"
-          onClick={onInitialPageClick}>
-            {initialPage}
-        </button>
-
-        <span className="mvl-paginator__text">...</span>
-
-        <button
-          className="pagination_button"
-          onClick={onPreviousPageClick}>
-            {currentPage-1}
-        </button>
-      
-        <button
-          className="pagination_button"
-          >
-            {currentPage}
-        </button>
-
-        <button
-          className="pagination_button"
-          onClick={onNextpageClick}>
-            {currentPage+1}
-        </button>
-
-
-        <span className="mvl-paginator__text">...</span>
-
-        <button
-          className="pagination_button"
-          onClick={onFinalPageClick}>
-            {totalPages}
-        </button>
-
-        <button
-          className="buttons"
-          disabled={isLastPage(currentPage, totalPages)}
-          onClick={onNextpageClick}>
-          Next
+        <button disabled={isLastPage(currentPage, totalPages)} onClick={onNextpageClick}>
           <BiChevronRight />
         </button>
       </div>
@@ -112,15 +62,6 @@ function getPreviousePage(currentPage) {
 function getNextPage(currentPage, maxPage) {
   return currentPage < maxPage ? currentPage + 1 : maxPage;
 }
-
-function getInitialPage(currentPage, initialPage) {
-  return currentPage > 1 ? initialPage : initialPage;
-}
-
-function getFinalPage(currentPage, maxPage){
-  return currentPage < maxPage ? maxPage : maxPage;
-}
-
 
 function getFlooredToatalPages(totalItems, pageSize) {
   return Math.floor(getToatalPages(totalItems, pageSize));
