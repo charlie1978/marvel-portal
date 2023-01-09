@@ -102,6 +102,7 @@ CharacterGrid.propTypes = {
 };
 
 function CharacterGrid({ characters, isLoading, itemsPerPage }) {
+  let prueba='';
   if (isLoading && characters.length === 0) {
     return <CharacterGridSkeleton amount={itemsPerPage} />;
   }
@@ -112,11 +113,11 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
 
   return characters.map(({ name, image }, index) => (
     <CharacterCard
-      name={name.split(' (')[0]}
+      name={name.split(/[(]|[)]/)[0]}
       image={image}
       key={index}
       currentDate={currentDate}
-      alias={name.split(' (')[1]}
+      alias= {name.split(/[(]|[)]/)[1]}
       isSkeleton={isLoading}
     />
   ));
