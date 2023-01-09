@@ -2,18 +2,16 @@ import './styles.scss';
 import PropTypes from 'prop-types';
 
 CharacterItem.propTypes = {
-  name: PropTypes.string,
-  isSkeleton: PropTypes.bool
+  name: PropTypes.string
 };
 
-export default function CharacterItem({ name, isSkeleton }) {
+export default function CharacterItem({ name}) {
   return (
-    <div className="mvl-character-list" data-is-skeleton={isSkeleton}>
-      <div className="mvl-character-card__body-container">
-        <div className="mvl-character-card__body">
-          <h4 className="u-no-margin">{name}</h4>
-        </div>
-      </div>
-    </div>
+    <li>
+      <label className="characters__list--text">
+        {/* <input value={false} type="checkbox" /> */}
+        {name}
+      </label>
+    </li>    
   );
 }
