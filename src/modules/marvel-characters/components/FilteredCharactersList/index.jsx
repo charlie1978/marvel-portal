@@ -23,7 +23,7 @@ export default function FilteredCharacterListPaginated({ searchValue }) {
 
   async function fetchCharactersAtPage(page = 1) {
     let letters = {
-      nameStartsWith: 'spi'
+      nameStartsWith: searchValue
     };
 
     console.log('el nameStartsWith es: ' + letters.nameStartsWith);
