@@ -34,7 +34,7 @@ export default function CharacterSpotlight() {
 
 ComicsGrid.propTypes = {
   comics: PropTypes.array.isRequired,
-  isLoading: PropTypes.bool,
+  isLoading: PropTypes.func,
   itemsPerPage: PropTypes.number
 };
 
