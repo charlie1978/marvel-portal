@@ -8,6 +8,7 @@ import Paginator from '@/modules/core/components/molecules/Paginator';
 import './styles.scss';
 import TotalResults from 'src/modules/core/components/atoms/TotalResults';
 import SerieFilter from 'src/modules/core/components/molecules/SerieFilter';
+//import SeparateNameAlias from './SeparateNameAlias';
 
 const INITIAL_PAGE = 1;
 const ITEMS_PER_PAGE = 24;
@@ -111,11 +112,11 @@ function CharacterGrid({ characters, isLoading, itemsPerPage }) {
 
   return characters.map(({ name, image }, index) => (
     <CharacterCard
-      name={name.split(' (',1)}
+      name={name.split(' (')[0]}
       image={image}
       key={index}
       currentDate={currentDate}
-      alias={name}
+      alias={name.split(' (')[1]}
       isSkeleton={isLoading}
     />
   ));
