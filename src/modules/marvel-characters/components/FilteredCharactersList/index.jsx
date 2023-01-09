@@ -36,14 +36,9 @@ export default function FilteredCharacterListPaginated({ searchValue }) {
     console.log('Total Personajes: ', data.total);
   }
 
-
-  // const onQueryChange = (query) => {
-  //   setQueryParams(query);
-  // };
-
   return (
     <>
-      <div className="mvl-grid mvl-grid-6">
+      <div className="filtered_characters_list">
         <CharacterList
           characters={characters}
           isLoading={isLoading}
